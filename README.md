@@ -1,6 +1,6 @@
-# Next.js & NextUI Template
+# Manufacturing Company
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+A manufacturing company operates customized ERP, inventory management, supply chain, shop floor systems built up over decades. Data is isolated in silos, limiting operational insights. Introducing new capabilities requires complex system coordination.
 
 ## Technologies Used
 
