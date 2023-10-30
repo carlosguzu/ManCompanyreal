@@ -80,7 +80,7 @@ export default function AboutPage() {
 			<div className="mr-4">
 		<Card className="w-64" isPressable>
 		<CardHeader className="flex gap-3">
-	    <Avatar isBordered color="danger" radius="full" size="md" src="" alt="Pinto" />
+	    <Avatar isBordered color="danger" radius="full" size="md" src="https://iili.io/JfYT2ta.jpg" alt="Pinto" />
 			<div className="flex flex-col">
 			<p className="font-bold text-lg leading-none">Luis J. Pinto</p>
 			</div>
