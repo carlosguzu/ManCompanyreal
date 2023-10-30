@@ -19,7 +19,7 @@ export default function AboutPage() {
 		<div className="mr-4">
 		<Card className="w-64" isPressable>
 		<CardHeader className="flex gap-3">
-	    <Avatar isBordered color="primary" radius="full" size="md" src="https://iili.io/JfoIFeI.jpg" alt="Carlos" />
+	    <Avatar isBordered color="primary" radius="full" size="md" src="https://iili.io/Jf1EOwg.jpg" alt="Carlos" />
 			<div className="flex flex-col">
 			<p className="font-bold text-lg leading-none">Carlos M. Guzmán</p>
 			</div>
