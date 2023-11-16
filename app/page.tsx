@@ -9,7 +9,7 @@ export default function Home() {
 		<div className="md:w-1/2"> {/* Controla el ancho de la mitad del contenedor para el texto */}
 		  <div className="max-w-lg text-start justify-start">
 			<h1 className={title()}>Manufacturing&nbsp;</h1>
-			<h1 className={title({ color: "green" })}>Company&nbsp;</h1>
+			<h1 className={title({ color: "orange" })}>Company&nbsp;</h1>
 			<br />
 			<h2 className={subtitle({ class: "mt-4" })}>
 			  Welcome to a system that aims to improve the efficiency and effectiveness in the production of liquor bottles. To achieve this, it has general functions such as login and SSO, control panel, inventory management, production planning, and quality control in bottle manufacturing.
