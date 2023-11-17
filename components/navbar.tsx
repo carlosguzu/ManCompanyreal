@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import "@/styles/globals.css";
+import { useTheme } from "next-themes"; 
 
 import {
 	Navbar as NextUINavbar,
@@ -42,11 +43,18 @@ export const Navbar = () => {
   
 	const handleMenuToggle = () => {
 	  setIsMenuOpen(!isMenuOpen);
+	  
 	};
 
+	const { theme } = useTheme();
+
+	const lightLogo = <img src="https://media.discordapp.net/attachments/854157284687347742/1175126755841933412/Captura_de_pantalla_2023-11-16_175237_clipdrop-background-removal.png?ex=656a1913&is=6557a413&hm=a5e4052115ea86713ffae5eb3ca74dae64819cca1d6ea4e6434ef532cbb2fc9b&=&width=228&height=308" alt="Light logo" width="40" height="8" />;
+	const darkLogo = <img src="https://media.discordapp.net/attachments/854157284687347742/1175139566039076904/Captura_de_pantalla_2023-11-16_175126-removebg-preview.png?ex=656a2501&is=6557b001&hm=a269f7b5cc215b04ca8c53ddfbafc076bf102ba2fcb3aec8121e33da3930bfa4&=&width=234&height=301" alt="Dark logo" width="40" height="8" />;
 
 
-  
+
+
+		
 	return (
 	  <NextUINavbar
 		maxWidth="xl"
@@ -60,16 +68,12 @@ export const Navbar = () => {
 			onClick={handleMenuToggle}
 		  />
   
-  			<NavbarBrand as="li" className="gap-3 max-w-fit">
-			{/* Tu contenido de NavbarBrand (por ejemplo, tu logotipo) */}
-			<NextLink className="flex justify-start items-center gap-1" href="/">
-			 <img src={"https://media.discordapp.net/attachments/854157284687347742/1175126755841933412/Captura_de_pantalla_2023-11-16_175237_clipdrop-background-removal.png?ex=656a1913&is=6557a413&hm=a5e4052115ea86713ffae5eb3ca74dae64819cca1d6ea4e6434ef532cbb2fc9b&=&width=228&height=308"}
-			  alt="Logo" 
-			  className="logo-image adjusted-logo"
-			  width="45" height="15" />
-			  <p className="text-white text-lg font-bold">MC</p>
-			</NextLink>
-		  </NavbarBrand>
+		<NavbarBrand as="li" className="gap-3 max-w-fit">
+		<NextLink className="flex justify-start items-center gap-1" href="/">
+				{theme === "light" ? lightLogo : darkLogo}
+				<p className="text-white text-lg font-bold">MC</p>
+		</NextLink>
+		</NavbarBrand>
   
 		  <NavbarMenu>
 			<ul className="flex flex-col lg:flex-row gap-4 justify-start ml-2">
@@ -108,4 +112,3 @@ export const Navbar = () => {
 	  </NextUINavbar>
 	);
   };
-  
