@@ -16,24 +16,17 @@ export default function Home() {
 			</h2>
 		  </div>
   
+  
 		  <div className="flex gap-5">
 			<Link
 			  
 			  as={NextLink}
 			  href={"/sign-up"}
-			  className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-			>
-			  Sign up
-			</Link>
-			<Link
-			  
-			  as={NextLink}
-			  className={buttonStyles({ variant: "bordered", radius: "full" })}
-			  href={"/sign-in"}
+			  className={buttonStyles({ color: "primary", radius: "lg", variant: "shadow", size: "lg" })}
 			>
 			  Sign in
 			</Link>
-
+			
 		  </div>
 		</div>
   

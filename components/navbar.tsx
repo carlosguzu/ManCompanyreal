@@ -37,6 +37,7 @@ import React, { useState } from "react";
 
 
 
+
 const orangeNavbarClass = "bg-[#fb8914]";
 export const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,8 +49,8 @@ export const Navbar = () => {
 
 	const { theme } = useTheme();
 
-	const lightLogo = <img src="https://media.discordapp.net/attachments/854157284687347742/1175126755841933412/Captura_de_pantalla_2023-11-16_175237_clipdrop-background-removal.png?ex=656a1913&is=6557a413&hm=a5e4052115ea86713ffae5eb3ca74dae64819cca1d6ea4e6434ef532cbb2fc9b&=&width=228&height=308" alt="Light logo" width="40" height="8" />;
-	const darkLogo = <img src="https://media.discordapp.net/attachments/854157284687347742/1175139566039076904/Captura_de_pantalla_2023-11-16_175126-removebg-preview.png?ex=656a2501&is=6557b001&hm=a269f7b5cc215b04ca8c53ddfbafc076bf102ba2fcb3aec8121e33da3930bfa4&=&width=234&height=301" alt="Dark logo" width="40" height="8" />;
+	const lightLogo = <img src= "https://media.discordapp.net/attachments/854157284687347742/1175139566039076904/Captura_de_pantalla_2023-11-16_175126-removebg-preview.png?ex=656a2501&is=6557b001&hm=a269f7b5cc215b04ca8c53ddfbafc076bf102ba2fcb3aec8121e33da3930bfa4&=&width=234&height=301" alt="Light logo" width="40" height="8" />;
+	const darkLogo = <img src= "https://media.discordapp.net/attachments/854157284687347742/1175126755841933412/Captura_de_pantalla_2023-11-16_175237_clipdrop-background-removal.png?ex=656a1913&is=6557a413&hm=a5e4052115ea86713ffae5eb3ca74dae64819cca1d6ea4e6434ef532cbb2fc9b&=&width=228&height=308"  alt="Dark logo" width="40" height="8" />;
 
 
 
