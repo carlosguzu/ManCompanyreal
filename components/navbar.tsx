@@ -1,4 +1,7 @@
 "use client";
+import { useEffect } from "react";
+import "@/styles/globals.css";
+
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
@@ -40,6 +43,9 @@ export const Navbar = () => {
 	const handleMenuToggle = () => {
 	  setIsMenuOpen(!isMenuOpen);
 	};
+
+
+
   
 	return (
 	  <NextUINavbar
@@ -54,15 +60,18 @@ export const Navbar = () => {
 			onClick={handleMenuToggle}
 		  />
   
-		  <NavbarBrand as="li" className="gap-3 max-w-fit">
+  			<NavbarBrand as="li" className="gap-3 max-w-fit">
 			{/* Tu contenido de NavbarBrand (por ejemplo, tu logotipo) */}
 			<NextLink className="flex justify-start items-center gap-1" href="/">
-			  <Logo /> {/* Puedes utilizar tu componente Logo aquí */}
-			  <p className="text-white text-lg font-bold">MiMarca</p>
+			 <img src={"https://media.discordapp.net/attachments/854157284687347742/1175126755841933412/Captura_de_pantalla_2023-11-16_175237_clipdrop-background-removal.png?ex=656a1913&is=6557a413&hm=a5e4052115ea86713ffae5eb3ca74dae64819cca1d6ea4e6434ef532cbb2fc9b&=&width=228&height=308"}
+			  alt="Logo" 
+			  className="logo-image adjusted-logo"
+			  width="45" height="15" />
+			  <p className="text-white text-lg font-bold">MC</p>
 			</NextLink>
 		  </NavbarBrand>
   
-		  <NavbarMenu opened={isMenuOpen}>
+		  <NavbarMenu>
 			<ul className="flex flex-col lg:flex-row gap-4 justify-start ml-2">
 			  {siteConfig.navItems.map((item) => (
 				<NavbarItem key={item.href}>
