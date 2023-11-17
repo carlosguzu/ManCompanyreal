@@ -1,39 +1,45 @@
 "use client";
-
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
-	NavbarMenuToggle, // Import NavbarMenuToggle from the example
+	NavbarMenu,
+	NavbarMenuToggle,
 	NavbarBrand,
 	NavbarItem,
 	NavbarMenuItem,
-  } from "@nextui-org/navbar";
-  import { Button } from "@nextui-org/button";
-  import React, { useState } from "react";
-  import { Link } from "@nextui-org/link";
-  import { Input } from "@nextui-org/input";
-  
-  import { link as linkStyles } from "@nextui-org/theme";
-  
-  import { siteConfig } from "@/config/site";
-  import NextLink from "next/link";
-  import clsx from "clsx";
-  
-  import { ThemeSwitch } from "@/components/theme-switch";
-  import {
+} from "@nextui-org/navbar";
+import { Button } from "@nextui-org/button";
+
+import { Link } from "@nextui-org/link";
+import { Input } from "@nextui-org/input";
+
+import { link as linkStyles } from "@nextui-org/theme";
+
+import { siteConfig } from "@/config/site";
+import NextLink from "next/link";
+import clsx from "clsx";
+
+import { ThemeSwitch } from "@/components/theme-switch";
+import {
 	TwitterIcon,
 	GithubIcon,
 	DiscordIcon,
 	HeartFilledIcon,
 	SearchIcon,
-  } from "@/components/icons";
+} from "@/components/icons";
+
+import { Logo } from "@/components/icons";
+import React, { useState } from "react";
+
+
+
+const orangeNavbarClass = "bg-[#fb8914]";
+export const Navbar = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  import { Logo } from "@/components/icons";
-  
-  const orangeNavbarClass = "bg-[#fb8914]";
-  
-  export const Navbar = () => {
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const handleMenuToggle = () => {
+	  setIsMenuOpen(!isMenuOpen);
+	};
   
 	return (
 	  <NextUINavbar
@@ -43,33 +49,38 @@ import {
 		className={orangeNavbarClass}
 	  >
 		<NavbarContent>
-		  {/* Use the NavbarMenuToggle from the example */}
 		  <NavbarMenuToggle
 			aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-			className="sm:hidden"
-			onClick={() => setIsMenuOpen(!isMenuOpen)}
+			onClick={handleMenuToggle}
 		  />
+  
 		  <NavbarBrand as="li" className="gap-3 max-w-fit">
+			{/* Tu contenido de NavbarBrand (por ejemplo, tu logotipo) */}
 			<NextLink className="flex justify-start items-center gap-1" href="/">
-			  {/* Your NavbarBrand content */}
+			  <Logo /> {/* Puedes utilizar tu componente Logo aquí */}
+			  <p className="text-white text-lg font-bold">MiMarca</p>
 			</NextLink>
 		  </NavbarBrand>
-		  <ul className="hidden lg:flex gap-4 justify-start ml-2">
-			{siteConfig.navItems.map((item) => (
-			  <NavbarItem key={item.href}>
-				<NextLink
-				  className={clsx(
-					linkStyles({ color: "foreground" }),
-					"data-[active=true]:text-primary data-[active=true]:font-medium"
-				  )}
-				  color="foreground"
-				  href={item.href}
-				>
-				  {item.label}
-				</NextLink>
-			  </NavbarItem>
-			))}
-		  </ul>
+  
+		  <NavbarMenu opened={isMenuOpen}>
+			<ul className="flex flex-col lg:flex-row gap-4 justify-start ml-2">
+			  {siteConfig.navItems.map((item) => (
+				<NavbarItem key={item.href}>
+				  {/* Tu contenido de NavbarItem (por ejemplo, enlaces de navegación) */}
+				  <NextLink
+					className={clsx(
+					  linkStyles({ color: "foreground" }),
+					  "data-[active=true]:text-primary data-[active=true]:font-medium"
+					)}
+					color="foreground"
+					href={item.href}
+				  >
+					{item.label}
+				  </NextLink>
+				</NavbarItem>
+			  ))}
+			</ul>
+		  </NavbarMenu>
 		</NavbarContent>
   
 		<NavbarContent
@@ -78,7 +89,7 @@ import {
 		>
 		  <ThemeSwitch />
 		  <NavbarItem className="hidden md:flex">
-			{/* Your NavbarItem content */}
+			{/* Otro contenido que desees mostrar en la barra de navegación */}
 		  </NavbarItem>
 		</NavbarContent>
   
