@@ -21,7 +21,7 @@ export default function Home() {
 			<Link
 			  
 			  as={NextLink}
-			  href={"/sign-up"}
+			  href={"/sign-in"}
 			  className={buttonStyles({ color: "primary", radius: "lg", variant: "shadow", size: "lg" })}
 			>
 			  Sign in
