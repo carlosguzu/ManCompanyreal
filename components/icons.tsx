@@ -124,7 +124,7 @@ export const SunFilledIcon = ({
 		role="presentation"
 		viewBox="0 0 24 24"
 		width={size || width}
-		color="black"
+		color="white"
 		{...props}
 	>
 		<g fill="currentColor">
