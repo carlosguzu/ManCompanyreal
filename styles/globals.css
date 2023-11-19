@@ -7,3 +7,14 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.NavbarMenu {
+  flex-direction: column; /* Change flex direction to column for vertical alignment */
+  align-items: center; /* Center the navigation items horizontally */
+  justify-content: center; /* Center the navigation items vertically */
+}
+
+.NavbarItem {
+  font-size: 24px; /* Increase font size to 24px */
+  margin-bottom: 16px; /* Add margin between navigation items */
+}

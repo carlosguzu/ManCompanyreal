@@ -38,8 +38,8 @@ import React, { useState } from "react";
 
 
 
-const orangeNavbarClass = "bg-[#fb8914]";
 export const Navbar = () => {
+	const orangeNavbarClass = "bg-[#fb8914]";
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
   
 	const handleMenuToggle = () => {
@@ -72,12 +72,11 @@ export const Navbar = () => {
 		<NavbarBrand as="li" className="gap-3 max-w-fit">
 		<NextLink className="flex justify-start items-center gap-1" href="/">
 				{theme === "light" ? lightLogo : darkLogo}
-				<p className="text-white text-lg font-bold">MC</p>
 		</NextLink>
 		</NavbarBrand>
   
 		  <NavbarMenu>
-			<ul className="flex flex-col lg:flex-row gap-4 justify-start ml-2">
+			<ul className="flex flex-col lg:flex-row gap-4 justify-center ml-2">
 			  {siteConfig.navItems.map((item) => (
 				<NavbarItem key={item.href}>
 				  {/* Tu contenido de NavbarItem (por ejemplo, enlaces de navegación) */}
