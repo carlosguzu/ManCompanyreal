@@ -18,3 +18,19 @@ main {
   font-size: 24px; /* Increase font size to 24px */
   margin-bottom: 16px; /* Add margin between navigation items */
 }
+
+
+
+  .bg-c86d10 {
+    background-color: #c86d10;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .bg-c86d10 img {
+    max-width: 100%;
+    height: auto;
+  }
+

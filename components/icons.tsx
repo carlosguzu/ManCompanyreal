@@ -101,6 +101,7 @@ export const MoonFilledIcon = ({
 		role="presentation"
 		viewBox="0 0 24 24"
 		width={size || width}
+		color="black"
 		{...props}
 	>
 		<path
@@ -123,6 +124,7 @@ export const SunFilledIcon = ({
 		role="presentation"
 		viewBox="0 0 24 24"
 		width={size || width}
+		color="black"
 		{...props}
 	>
 		<g fill="currentColor">

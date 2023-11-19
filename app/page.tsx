@@ -31,7 +31,7 @@ export default function Home() {
 		</div>
   
 		<div className="md:w-1/2 flex justify-end"> {/* Controla el ancho de la mitad del contenedor para la imagen */}
-		  <img src="https://iili.io/JKJl3qG.png" alt="Logo Manufacturing Company" />
+		  <img src="https://iili.io/JnjNsF1.png" alt="Logo Manufacturing Company" />
 		</div>
 	  </section>
 	);
