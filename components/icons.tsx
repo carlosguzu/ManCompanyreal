@@ -101,7 +101,7 @@ export const MoonFilledIcon = ({
 		role="presentation"
 		viewBox="0 0 24 24"
 		width={size || width}
-		color="black"
+		color="#202020"
 		{...props}
 	>
 		<path
