@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { rows, columns, rowlen } from "./data";
+import { rows, columns, rowlen, totalOrders } from "./data";
 import * as echarts from 'echarts';
 
 const Pie: React.FC = () => {
@@ -13,6 +13,10 @@ const Pie: React.FC = () => {
     }));
   //key y label es igual a value and name, son intercambiables y depende de la biblioteca con la que se esté trabajando
    
+  const color = {}//???
+
+ 
+
     const option = {
       
     tooltip: {
@@ -51,6 +55,7 @@ const Pie: React.FC = () => {
       }
     ]
     };
+
     
     option && myChart.setOption(option);
 

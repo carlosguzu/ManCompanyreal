@@ -1,27 +1,46 @@
 const rows = [
+
     {
       id: "1",
       type: "Whiskey",
-      quantity: 600, 
+      quantity: 600,
       status: "Producing",
     },
     {
       id: "2",
       type: "Vodka",
-      quantity: 200, 
+      quantity: 200,
       status: "On queue",
     },
     {
       id: "3",
       type: "Rum",
-      quantity: 300, 
+      quantity: 300,
       status: "Finished",
     },
     {
       id: "4",
       type: "Gin",
-      quantity: 450, 
+      quantity: 450,
       status: "Producing",
+    },
+    {
+      id: "5",
+      type: "Tequila",
+      quantity: 150,
+      status: "On queue",
+    },
+    {
+      id: "6",
+      type: "Beer",
+      quantity: 800,
+      status: "Producing",
+    },
+    {
+      id: "7",
+      type: "Wine",
+      quantity: 250,
+      status: "Finished",
     },
   ];
   
