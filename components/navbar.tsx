@@ -49,8 +49,7 @@ export const Navbar = () => {
   
 	const handleMenuToggle = () => {
 	  setIsMenuOpen(!isMenuOpen);
-	  
-	};
+	  	};
 
 	const { theme } = useTheme();
 

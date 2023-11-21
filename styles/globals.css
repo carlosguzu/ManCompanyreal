@@ -6,7 +6,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} 
 
 .NavbarMenu {
   flex-direction: column; /* Change flex direction to column for vertical alignment */
