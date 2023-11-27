@@ -11,13 +11,13 @@ import {
   TableCell,
   getKeyValue,
 } from "@nextui-org/react";
-import { EditIcon } from "../EditIcon";
-import { DeleteIcon } from "../DeleteIcon";
 import OrderTable from "@/components/ordertable";
 import Pie from "@/components/pie";
 import {rows, columns, finishedOrders, producingOrders, onQueueOrders, totalOrders} from "@/components/data";
 
-/*import EyeIcon from "../EyeIcon";*/
+
+
+
 
 export default function DashboardPage() {
 	const { isLoaded, isSignedIn, user } = useUser();
