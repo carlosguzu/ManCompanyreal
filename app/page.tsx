@@ -28,7 +28,7 @@ export default function Home() {
 		</div>		
 		</div>
 
-		<div className=" md:w-1/2 flex justify-end bg-c86d10"> {/* Controla el ancho de la mitad del contenedor para la imagen */}
+		<div className=" md:w-1/2 flex justify-end"> {/* Controla el ancho de la mitad del contenedor para la imagen */}
 		<img src="https://iili.io/JnjNsF1.png" alt="Logo Manufacturing Company" />
 		</div>
 		</section>
