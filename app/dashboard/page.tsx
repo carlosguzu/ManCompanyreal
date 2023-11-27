@@ -29,17 +29,17 @@ export default function DashboardPage() {
 	  
     return (
       <section className="py-20">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h1 className={title()}>Dashboard</h1>
           <p>Welcome, {user.firstName}</p>
         </div>
     
-        <div className="flex justify-center gap-8">
-          <div className="container">
+        <div className="flex justify-center gap-16 mr-12">
+          <div className="container ">
             <OrderTable />
           </div>
     
-          <div className="container">
+         <div className="container mr-10">
             <Pie />
           </div>
     
@@ -55,5 +55,6 @@ export default function DashboardPage() {
         </div>
       </section>
     );
+    
     
 }

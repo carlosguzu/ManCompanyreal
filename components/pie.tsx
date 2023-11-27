@@ -65,7 +65,9 @@ const Pie: React.FC = () => {
       };
     }, []);
   
-    return <div id="pie-chart" style={{ height: '400px' }} />;
+    return <div id="pie-chart" style={{ height: '400px', width: '290px' }} />;
   };
   
   export default Pie;
+
+  
