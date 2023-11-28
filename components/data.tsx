@@ -43,7 +43,7 @@ export function useOrdersData() {
   const rowlen = [
     { key: finishedOrders, label: "Finished" },
     { key: producingOrders, label: "Producing" },
-    { key: onQueueOrders, label: "On queue" },
+    { key: onQueueOrders, label: "On Queue" },
   ];
 
   return { rows, columns, finishedOrders, producingOrders, onQueueOrders, totalOrders, rowlen };
