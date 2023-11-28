@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { rows, columns, rowlen, totalOrders } from "./data";
+import {useOrdersData} from "./data";
 import * as echarts from 'echarts';
 
 const Pie: React.FC = () => {
+  const {rowlen} = useOrdersData();  
   useEffect(() => {
     const chartDom = document.getElementById('pie-chart')!;
     const myChart = echarts.init(chartDom);

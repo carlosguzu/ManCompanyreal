@@ -13,14 +13,15 @@ import {
 } from "@nextui-org/react";
 import OrderTable from "@/components/ordertable";
 import Pie from "@/components/pie";
-import {rows, columns, finishedOrders, producingOrders, onQueueOrders, totalOrders} from "@/components/data";
-
+import {useOrdersData} from "@/components/data";
 
 
 
 
 export default function DashboardPage() {
 	const { isLoaded, isSignedIn, user } = useUser();
+// Desestructura los valores que necesitas de useOrdersData
+const {finishedOrders, producingOrders, onQueueOrders, totalOrders, rowlen } = useOrdersData();  
 
 
 	if (!isLoaded || !isSignedIn) {
