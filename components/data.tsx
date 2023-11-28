@@ -11,7 +11,7 @@ export function useOrdersData() {
   const [rows, setRows] = useState<ApiOrder[]>([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/orders/?skip=0&limit=10')
+    fetch('http://127.0.0.1:8000/orders/?skip=0&limit=10s')
       .then(response => response.json())
       .then(data => setRows(data));
   }, []);
@@ -37,13 +37,13 @@ export function useOrdersData() {
 
   const finishedOrders = rows.filter((order) => order.status === "Finished").length;
   const producingOrders = rows.filter((order) => order.status === "Producing").length;
-  const onQueueOrders = rows.filter((order) => order.status === "On Queue").length;
+  const onQueueOrders = rows.filter((order) => order.status === "On queue").length;
   const totalOrders = rows.length;
 
   const rowlen = [
     { key: finishedOrders, label: "Finished" },
     { key: producingOrders, label: "Producing" },
-    { key: onQueueOrders, label: "On Queue" },
+    { key: onQueueOrders, label: "On queue" },
   ];
 
   return { rows, columns, finishedOrders, producingOrders, onQueueOrders, totalOrders, rowlen };
