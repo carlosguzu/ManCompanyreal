@@ -11,7 +11,7 @@ export function useOrdersData() {
   const [rows, setRows] = useState<ApiOrder[]>([]);
 
   useEffect(() => {
-    fetch('https://65663055eb8bb4b70ef3043d.mockapi.io/api/v1/liquors')
+    fetch('http://127.0.0.1:8000/orders/?skip=0&limit=10')
       .then(response => response.json())
       .then(data => setRows(data));
   }, []);
@@ -37,7 +37,7 @@ export function useOrdersData() {
 
   const finishedOrders = rows.filter((order) => order.status === "Finished").length;
   const producingOrders = rows.filter((order) => order.status === "Producing").length;
-  const onQueueOrders = rows.filter((order) => order.status === "On queue").length;
+  const onQueueOrders = rows.filter((order) => order.status === "On Queue").length;
   const totalOrders = rows.length;
 
   const rowlen = [

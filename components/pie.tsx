@@ -60,7 +60,7 @@ const Pie: React.FC = () => {
     };
   }, [rowlen]);
 
-  return <div id="pie-chart" style={{ height: '400px', width: '300px' }} />;
+  return <div id="pie-chart" style={{ height: '400px', width: '370px' }} />;
 };
 
 export default Pie;
