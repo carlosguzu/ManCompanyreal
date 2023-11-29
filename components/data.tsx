@@ -11,7 +11,7 @@ export function useOrdersData() {
   const [rows, setRows] = useState<ApiOrder[]>([]);
 
   useEffect(() => {
-    fetch('https://65663055eb8bb4b70ef3043d.mockapi.io/api/v1/liquors')
+    fetch('https://backkk-6ooc.onrender.com/orders/?skip=0&limit=10')
       .then(response => response.json())
       .then(data => setRows(data));
   }, []);
