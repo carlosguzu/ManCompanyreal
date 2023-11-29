@@ -11,7 +11,7 @@ export function useOrdersData() {
   const [rows, setRows] = useState<ApiOrder[]>([]);
 
   useEffect(() => {
-    fetch('https://backkk-6ooc.onrender.com/orders/?skip=0&limit=10')
+    fetch('https://backkk-6ooc.onrender.com/orders/?skip=0&')
       .then(response => response.json())
       .then(data => setRows(data));
   }, []);

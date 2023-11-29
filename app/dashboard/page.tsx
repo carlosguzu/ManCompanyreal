@@ -14,7 +14,7 @@ import {
 import OrderTable from "@/components/ordertable";
 import Pie from "@/components/pie";
 import {useOrdersData} from "@/components/data";
-
+import InputOrder from "@/components/inputorder";
 
 
 
@@ -52,6 +52,9 @@ const {finishedOrders, producingOrders, onQueueOrders, totalOrders, rowlen } = u
               <p className="mb-2">On Queue Orders: {onQueueOrders}</p>
               <p>Total Orders: {totalOrders}</p>
             </div>
+          </div>
+          <div className="container mr-10">
+          <InputOrder/>
           </div>
         </div>
       </section>
