@@ -8,16 +8,16 @@ const InputOrder = () => {
   const [popoverMessage, setPopoverMessage] = useState("");
 
   const handleCreateOrder = async () => {
-    // Validar que todos los campos estén llenos
+    // Validate that all fields are filled
     if (!type || !quantity || !status) {
-      setPopoverMessage("Por favor, completa todos los campos.");
+      setPopoverMessage("Please fill in all fields.");
       return;
     }
 
-    // Validar que el campo status tenga un valor permitido
+    // Validate that the status field has an allowed value
     const allowedStatusValues = ["Producing", "On Queue", "Finished"];
     if (!allowedStatusValues.includes(status)) {
-      setPopoverMessage("El valor del campo 'status' no es válido. Debe ser 'Producing', 'On Queue' o 'Finished'.");
+      setPopoverMessage("The value of the 'status' field is not valid. It should be 'Producing', 'On Queue', or 'Finished'.");
       return;
     }
 
@@ -35,21 +35,21 @@ const InputOrder = () => {
       });
 
       if (response.ok) {
-        setPopoverMessage("Orden creada exitosamente");
+        setPopoverMessage("Order created successfully");
       } else {
-        setPopoverMessage(`Error al crear la orden: ${response.status} ${response.statusText}`);
+        setPopoverMessage(`Error creating the order: ${response.status} ${response.statusText}`);
         const errorData = await response.json();
-        console.error("Detalles del error:", errorData);
+        console.error("Error details:", errorData);
       }
     } catch (error) {
-      setPopoverMessage("Error al enviar la solicitud");
-      console.error("Error al enviar la solicitud", error);
+      setPopoverMessage("Error sending the request");
+      console.error("Error sending the request", error);
     }
   };
 
   return (
     <div>
-      {/* Campos de entrada fuera del Popover para que siempre estén visibles */}
+      {/* Input fields outside the Popover so they are always visible */}
       <Input placeholder="Type" value={type} onChange={(e) => setType(e.target.value)} />
       <br />
       <Input placeholder="Quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
@@ -58,7 +58,7 @@ const InputOrder = () => {
       <br />
       <Popover placement="bottom">
         <PopoverTrigger>
-          <Button color="success" onClick={handleCreateOrder} >Crear Orden</Button>
+          <Button color="success" onClick={handleCreateOrder}>Create Order</Button>
         </PopoverTrigger>
         <PopoverContent>
           <div className="px-1 py-2">
@@ -66,7 +66,6 @@ const InputOrder = () => {
           </div>
         </PopoverContent>
       </Popover>
-
     </div>
   );
 };
